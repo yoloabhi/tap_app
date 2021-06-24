@@ -1,8 +1,13 @@
 import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
+import 'package:login_example/calender_screen.dart';
+import 'package:login_example/profile_screen.dart';
+import 'package:login_example/register_screen.dart';
 import 'dashboard_screen.dart';
 import 'login_screen.dart';
 import 'transition_route_observer.dart';
+import 'package:login_example/profile_screen.dart';
+import 'package:login_example/home_screen.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
@@ -58,6 +63,10 @@ class MyApp extends StatelessWidget {
       navigatorObservers: [TransitionRouteObserver()],
       initialRoute: LoginScreen.routeName,
       routes: {
+        RegisterScreen.id: (context) => RegisterScreen(),
+        CalenderScreen.id: (context) => CalenderScreen(),
+        HomeScreen.id: (context) => HomeScreen(),
+        ProfileScreen.id: (context) => ProfileScreen(),
         LoginScreen.routeName: (context) => LoginScreen(),
         DashboardScreen.routeName: (context) => DashboardScreen(),
       },

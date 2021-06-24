@@ -3,11 +3,15 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter_login/theme.dart';
 import 'package:flutter_login/widgets.dart';
+import 'package:login_example/calender_screen.dart';
+import 'package:login_example/profile_screen.dart';
+import 'package:login_example/register_screen.dart';
 import 'transition_route_observer.dart';
 import 'widgets/fade_in.dart';
 import 'constants.dart';
 import 'widgets/animated_numeric_text.dart';
 import 'widgets/round_button.dart';
+import 'package:login_example/home_screen.dart';
 
 class DashboardScreen extends StatefulWidget {
   static const routeName = '/dashboard';
@@ -150,7 +154,7 @@ class _DashboardScreenState extends State<DashboardScreen>
               children: <Widget>[
                 AnimatedNumericText(
                   initialValue: 0,
-                  targetValue: 10,
+                  targetValue: 3,
                   curve: Interval(0, 1, curve: Curves.easeOut),
                   controller: _loadingController!,
                   style: theme.textTheme.headline3!.copyWith(
@@ -166,8 +170,12 @@ class _DashboardScreenState extends State<DashboardScreen>
     );
   }
 
-  Widget _buildButton(
-      {Widget? icon, String? label, required Interval interval}) {
+  Widget _buildButton({
+    Widget? icon,
+    String? label,
+    required Interval interval,
+    required VoidCallback onPressed,
+  }) {
     return RoundButton(
       icon: icon,
       label: label,
@@ -177,7 +185,7 @@ class _DashboardScreenState extends State<DashboardScreen>
         interval.end,
         curve: ElasticOutCurve(0.42),
       ),
-      onPressed: () {},
+      onPressed: onPressed,
     );
   }
 
@@ -195,10 +203,12 @@ class _DashboardScreenState extends State<DashboardScreen>
       crossAxisCount: 3,
       children: [
         _buildButton(
-          icon: Icon(FontAwesomeIcons.user),
-          label: 'Profile',
-          interval: Interval(0, aniInterval),
-        ),
+            icon: Icon(FontAwesomeIcons.user),
+            label: 'Profile',
+            interval: Interval(0, aniInterval),
+            onPressed: () {
+              Navigator.pushNamed(context, ProfileScreen.id);
+            }),
         _buildButton(
           icon: Container(
             // fix icon is not centered like others for some reasons
@@ -211,41 +221,49 @@ class _DashboardScreenState extends State<DashboardScreen>
           ),
           label: 'Calender',
           interval: Interval(step, aniInterval + step),
+          onPressed: () {
+            Navigator.pushNamed(context, CalenderScreen.id);
+          },
         ),
-        //_buildButton(
-        //icon: Icon(FontAwesomeIcons.handHoldingUsd),
-        //label: 'Payment',
-        //interval: Interval(step * 2, aniInterval + step * 2),
-        //),
         _buildButton(
           icon: Icon(FontAwesomeIcons.chartLine),
           label: 'Event progress',
           interval: Interval(0, aniInterval),
+          onPressed: () {
+            Navigator.pushNamed(context, HomeScreen.id);
+          },
         ),
         _buildButton(
           icon: Icon(Icons.vpn_key),
           label: 'Register',
           interval: Interval(step, aniInterval + step),
+          onPressed: () {
+            Navigator.pushNamed(context, RegisterScreen.id);
+          },
         ),
         _buildButton(
           icon: Icon(FontAwesomeIcons.history),
           label: 'Notifications',
           interval: Interval(step * 2, aniInterval + step * 2),
+          onPressed: () {},
         ),
         _buildButton(
           icon: Icon(FontAwesomeIcons.ellipsisH),
           label: 'Other',
           interval: Interval(0, aniInterval),
+          onPressed: () {},
         ),
         _buildButton(
           icon: Icon(FontAwesomeIcons.search, size: 20),
           label: 'Search',
           interval: Interval(step, aniInterval + step),
+          onPressed: () {},
         ),
         _buildButton(
           icon: Icon(FontAwesomeIcons.slidersH, size: 20),
           label: 'Settings',
           interval: Interval(step * 2, aniInterval + step * 2),
+          onPressed: () {},
         ),
       ],
     );

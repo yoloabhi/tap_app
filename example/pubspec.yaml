@@ -13,7 +13,11 @@ dependencies:
     path: ../
   cupertino_icons: ^1.0.2
   font_awesome_flutter: ^9.0.0
+  percent_indicator: ^2.1.1
   intl: ^0.17.0
+  google_fonts: ^2.1.0
+  scrollable_positioned_list: ^0.1.7
+  table_calendar: ^3.0.0
   # dummy package to test https://github.com/NearHuscarl/flutter_login/issues/35
   provider: ^5.0.0
 
@@ -25,12 +29,28 @@ flutter:
   uses-material-design: true
 
   assets:
-  - assets/images/ecorp.png
-  - assets/images/ecorp-lightblue.png
-  - assets/images/ecorp-lightgreen.png
-  - assets/images/manipal_logo.png
-  - assets/images/manipal.png
-  - assets/images/manipaluni.png
+   - assets/img/pro-background.png
+   - assets/img/onboard-background.png
+   - assets/img/logo-android.png
+   - assets/img/logo-ios.png
+   - assets/img/logo-argon.png
+   - assets/img/profile-screen-avatar.jpg
+   - assets/img/profile-screen-bg.png
+   - assets/img/register-bg.png
+   - assets/img/chat-avatar.jpeg
+   - assets/img/argon-logo.png
+   - assets/img/argon-logo-onboarding.png
+   - assets/img/profilepic.jfif
+   - assets/images/ecorp.png
+   - assets/images/ecorp-lightblue.png
+   - assets/images/ecorp-lightgreen.png
+   - assets/images/manipal_logo.png
+   - assets/images/manipal.png
+   - assets/images/manipaluni.png
+   - images/icon_1.png
+   - images/icon_2.png
+   - images/icon_3.png
+   - images/icon_4.png
 
   fonts:
     - family: OpenSans
