@@ -21,20 +21,20 @@ The TAP APP project addresses challenges faced by students and university placem
 1. **Initial Planning and Structure:** Careful planning and structuring of the application's architecture and features.
 2. **Authentication Logic:** Implementation of authentication logic for both students and admin/cell coordinators.
    - **Login Page:**
-     ![Login Page](screenshots/login.png) 
+     ![Login Page](screenshots/login.PNG) 
 3. **User Profile Operations:** Development of functionalities related to user profiles, registration, updates, and preferences.
    - **Profile:**
-     ![Profile 1](screenshots/profile.png)
-     ![Profile 2](screenshots/profile2.png)
+     ![Profile 1](screenshots/profile.PNG)
+     ![Profile 2](screenshots/profile2.PNG)
 4. **Event Creation:** Implementation of features for placement coordinators to create and manage placement events.
    - **Dashboard:**
-     ![Dashboard](screenshots/dashboard.png)
+     ![Dashboard](screenshots/dashboard.PNG)
    - **Events Page:**
-     ![Events Page](screenshots/events.png) 
+     ![Events Page](screenshots/events.PNG) 
 5. **Student Application Features:** Development of the student interface for easy event applications.
 6. **Event Categorization:** Events categorized as upcoming, ongoing, and completed to assist students in tracking and planning.
 7. **Notification System:** Integration of a notification system to keep users informed about important updates.
-     ![Calendar](screenshots/calendar.png) 
+     ![Calendar](screenshots/calendar.PNG) 
 8. **Admin Dashboard:** Development of an admin dashboard for database maintenance, monitoring, and issue resolution.
 9. **Ongoing Improvements:** Continuous enhancements to both the frontend and backend based on user feedback.
 
@@ -42,7 +42,7 @@ The TAP APP project addresses challenges faced by students and university placem
 1. **Frontend and Backend Development:** Proficiency in Flutter, Vue.js, and Firebase.
 2. **Web Scraping:** Skills in web scraping using BeautifulSoup and Selenium.
    - Sample Scraped Data:
-     ![Sample Scraped Data](screenshots/scraped.png) 
+     ![Sample Scraped Data](screenshots/scraped.PNG) 
 3. **Natural Language Processing (NLP):** Knowledge and practical experience in NLP, specifically in using NER and BERT.
 4. **Database Maintenance:** Experience in managing databases, ensuring data integrity, and addressing issues.
 5. **Project Management:** Skills in planning, organizing, and executing projects effectively.
