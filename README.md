@@ -15,7 +15,7 @@ The TAP APP project addresses challenges faced by students and university placem
 1. **Frontend Development:** Vue.js for its cross-platform capabilities and improved PWA integration.
 2. **Backend Development:** Firebase for real-time database capabilities and authentication services.
 3. **Web Scraping:** BeautifulSoup and Selenium for extracting data from students' LinkedIn profiles.
-   ![Web Scraping](screenshots/scraped.png) 
+   ![Web Scraping](screenshots/scraped.PNG) 
 
 ## Execution
 1. **Initial Planning and Structure:** Careful planning and structuring of the application's architecture and features.
